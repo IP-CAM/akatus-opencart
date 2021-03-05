@@ -1,77 +1,77 @@
-<p align="left">
-    <img src="https://site.akatus.com/wp-content/uploads/2012/12/logo.gif" alt="Akatus" title="Akatus" />
-</p>
+<p align = "left">
+    <img src = "https://site.akatus.com/wp-content/uploads/2012/12/logo.gif" alt = "akatus" title = "akatus" />
+</ p>
 
-# Módulo Akatus para OpenCart (1.5.3.1 ou superior)
+# Akatus module for OpenCart (1.5.3.1 or higher)
 
-__Importante:__ Existem duas versões disponíveis para este módulo.
-Por padrão a versão para download é sem One Step Checkout.
-Caso queira utilizar a versão com One Step Checkout clique no link: https://github.com/Akatus/akatus-opencart/archive/one_step_checkout.zip
+__ImPortant: __ There are two versions available for this module.
+By default the download version is without One Step Checkout.
+If you want to use the version with One Step Checkout Click on the link: https://github.com/akatus/akatus-opencart/archive/one_step_checkout.zip
 
-## Instalação
+## Installation
 
-__Atenção:__ Faça um backup completo dos arquivos e banco de dados da sua loja antes de iniciar a instalação.
+__Actention: __ Make a complete backup of your store's files and database before starting the installation.
              
-__O módulo requer a instalação do Vqmod__
+__The module requires installation of vqmod__
 
 
-* Abra o arquivo compactado e extraia todos os diretórios na raíz de sua loja OpenCart, sobrescrevendo os arquivos e diretórios já existentes.
+* Open the compressed file and extract all directories in the root of your OpenCart store, overwriting existing files and directories.
 
-* Execute apenas 1 vez o arquivo “akatus_db_install.php”, acessando ele através de http://sualoja.com.br/akatus_db_install.php. Este arquivo criará os status de
-compras que precisaremos para atualizar os pagamentos. Se tudo der certo, aparecerá
-a mensagem “Os status das transacoes da Akatus foram inseridos com sucesso” ao término da execução.
+* Run only once the file "akatus_db_install.php", accessing it through http://sualoja.com.br/akatus_db_install.php. This file will create the status of
+Shopping we need to update the payments. If everything works out, it will appear
+The message "Akatus transaction status were successfully inserted" at the end of execution.
 
-* Efetue login na Administração. Vá ao menu *Extensions >> Payments*. Aparecerão 3 novos módulos Akatus – Cartões de Crédito, Boleto Bancário e Transferência Eletrônica. Clique no link INSTALL, localizado ao lado direito de cada um deles e em seguida em EDIT.
+* Log in to the administration. Go to the Menu * Extensions >> Payments *. There will appear 3 new akatus - credit cards, banking bill and electronic transfer. Click the Install link, located on the right side of each of them and then in Edit.
 
-## Configuração
+## Settings
 
-* __Nome do Módulo__ - Adicione um nome a ser exibido no checkout.
+* __Name__ - Add a name to be displayed at checkout.
 
-* __Status Padrão dos Pedidos__ – Selecione o status "Aguardando Pagamento"
+* __Status default requests__ - Select the status "awaiting payment"
 
-* __Zona__ – Selecione a zona de pagamento onde o módulo deverá ser exibido. Mantenha a opção “Todas as Zonas”.
+* __Zona__ - Select the payment zone where the module should be displayed. Keep the "all zones" option.
 
-* __Ordem__ – Informe a ordem na qual essa opção de pagamento deverá ser exibida no checkout __(número inteiro)__.
+* __OrDem__ - Enter the order in which this payment option should be displayed at checkout __ (integer) __.
 
-* __Parcelamento sem juros até__ – Informe quantas parcelas você deseja assumir dos juros. Para que essa opção funcione corretamente, é necessário também alterá-la no seu painel da
-Akatus em *“Minha Conta >> Meios de Pagamento”*. O valor padrão é 1. __*(apenas para cartão de crédito)*__
+* __ Parcelamento without interest until__ - inform how many installments you want to take on interest. In order for this option to work correctly, it is also necessary to change it in your
+Akatus in * "My Account >> Payment Means" *. The default value is 1. __ * (credit card only) * __
 
-* __Status__ - Selecione Ativo
+* __Status__ - Select Active
 
-## Dados da conta Akatus
+## Account data akatus
 
-* __Tipo__ - Produção ou Sandbox (para realização de testes)
+* __Type__ - Production or Sandbox (for testing)
 
-* __E-mail da Conta__ - E-mail de cadastro da conta Akatus
+* __A-mail account__ - Akatus account registration e-mail
 
-* __Token NIP__ - Código gerado no painel da conta Akatus (menu Integração > Chaves de Segurança)
+* __Token NIP__ - Code Generated in the Akatus Account Panel (Integration Menu> Security Keys)
 
-* __API Key__ - Código gerado no painel da conta Akatus (menu Integração > Chaves de Segurança)
+* __Api Key__ - Code generated in the Akatus account panel (Integration menu> Security keys)
 
-*__Public Token__ - Código gerado no painel da conta Akatus (menu Integração > Chaves de Segurança)
+* __ Public Token__ - Code generated in the Akatus account panel (Integration menu> Security keys)
 
-* __Número máximo de parcelas__ - Informe em até quantas
-parcelas o usuário poderá dividir suas compras. O padrão é 12 parcelas, e o valor mínimo da parcela será sempre 5 reais. 
-__*(apenas para cartão de crédito)*__
+* Maximum number of parcels__ - Enter as many
+PLOTS The user can split their purchases. The default is 12 installments, and the minimum portion value will always be 5 reais.
+__ * (credit card only) * __
 
-## Notificação Instantânea de Pagamento (NIP)
+## Instant payment notification (NIP)
 
-Para receber as notificações de mudanças no status das transações é necessário:
+To receive changes notifications in transaction status is required:
 
-1. Acessar o menu *Integração >> Notificações*, dentro da sua conta Akatus.
-2. Habilitar as notificações e inserir a URL no padrão: http://www.sualoja.com.br/akatus/retorno.php
+1. Access the menu * Integration >> Notifications *, within your Akatus account.
+2. Enable notifications and insert the URL in the default: http://www.sualoja.com.br/akatus/retano.php
 
-Clique em Salvar.
+Click Save.
 
-__Atenção:__ É interessante utilizar HTTPS para o NIP, porém é necessário que o servidor esteja corretamente configurado e com certificado SSL válido.
-
-
-## Configuração de Desconto
-
-A opção de desconto está disponível apenas para boleto e TEF. Entre nas respectivas opções de pagamento e realize a configuração.
-Lembramos que o campo só aceita porcentagem.
+__Oping: __ It is interesting to use HTTPS for NIP, however it is necessary that the server is correctly configured and with valid SSL certificate.
 
 
-## Mostrando o valor do desconto no checkout
+## Discount Setup
 
-Para mostrar o valor do desconto no checkout entre em: *Extensions >> Order Totals* e ative as opções Akatus Discount Docket e Akatus Discount TEF.
+The discount option is only available for ticket and TEF. Enter the respective payment options and perform the configuration.
+We remind you that the field only accepts percentage.
+
+
+## Showing the discount amount at checkout
+
+To show the discount amount at checkout between: * Extensions >> Order Totals * and activate the Akatus Discount Docket and Akatus Discount TEF options.
